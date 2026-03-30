@@ -23,6 +23,13 @@ import subscriptionRouter from './routes/subscription.routers.js';
 import notificationRouter from './routes/notification.routers.js';
 
 // Routes
+app.get("/", (req, res) => {
+    res.status(200).json({
+        success: true,
+        message: "Videotube API is running securely! 🚀"
+    });
+});
+
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/videos", videoRouter);
 app.use("/api/v1/comments", commentRouter);
